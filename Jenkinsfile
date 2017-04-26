@@ -1,4 +1,4 @@
-pipeline {
+
    node{
 stages {
 
@@ -22,5 +22,4 @@ stage('Test') {
             }
         }
     }
-} }
-
+} 
