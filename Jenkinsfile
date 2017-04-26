@@ -4,9 +4,9 @@ stages {
 
 
 
-stage ('checkout') {
-     git url: 'https://github.com/claudiadelriego/Example-Pipeline.git'
-}
+stage checkout
+   git url: 'https://github.com/claudiadelriego/Example-Pipeline.git'
+
 
 
 stage ('Build'){
@@ -22,4 +22,4 @@ stage('Test') {
             }
         }
     }
-} 
+}
