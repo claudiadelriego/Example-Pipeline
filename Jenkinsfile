@@ -1,21 +1,20 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
+     stages {
+
+        stage ('Build'){
+           step {
+           checkout scm
+           echo 'DONE'
+           }
         }
+
         stage('Test') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+               step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
             }
         }
     }
 }
+
