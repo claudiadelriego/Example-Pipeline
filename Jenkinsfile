@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-     
+     git url: 'https://github.com/claudiadelriego/Example-Pipeline.git', branch: 'master'
 
      stages {
 
