@@ -1,5 +1,10 @@
 node{
 
+tools {
+        maven 'Maven 3.3.9'
+        jdk 'jdk8'
+    }
+
 stage 'checkout'
    git url: 'https://github.com/claudiadelriego/Example-Pipeline.git'
 
