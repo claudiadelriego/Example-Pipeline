@@ -1,9 +1,10 @@
 pipeline {
     agent any
+stages {
+ stage ('checkout')
+     git url: 'https://github.com/claudiadelriego/Example-Pipeline.git'
 
-     git url: 'https://github.com/claudiadelriego/Example-Pipeline.git', branch: 'master'
 
-     stages {
 
         stage ('Build'){
            steps {
