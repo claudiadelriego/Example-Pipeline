@@ -1,23 +1,26 @@
 pipeline {
-    agent any
+   node{
 stages {
- stage ('checkout') {
+
+
+
+stage ('checkout') {
      git url: 'https://github.com/claudiadelriego/Example-Pipeline.git'
 }
 
 
-        stage ('Build'){
+stage ('Build'){
            steps {
 
            echo 'DONE'
            }
         }
 
-        stage('Test') {
+stage('Test') {
             steps {
                step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
             }
         }
     }
-}
+} }
 
