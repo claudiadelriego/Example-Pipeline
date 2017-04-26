@@ -1,21 +1,20 @@
 
    node{
-stages {
 
 
 
-stage checkout
+
+stage 'checkout'
    git url: 'https://github.com/claudiadelriego/Example-Pipeline.git'
 
 
 
-stage ('Build'){
-           steps {
+stage 'Build'
+
 
            echo 'DONE'
-           }
-        }
 
 
-}
+
+
 }
